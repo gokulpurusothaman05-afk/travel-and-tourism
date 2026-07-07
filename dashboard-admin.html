@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Travel</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="section-dark">
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-logo">STACKLY</div>
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Mobile Toggle Button (starts from 320px screen) -->
+  <button class="dashboard-toggle-btn">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="dashboard-wrapper">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="dashboard-sidebar">
+      <div class="dashboard-brand">
+        <a class="navbar-brand navbar-brand-stackly" href="index.html">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">STACKLY<span>.</span>
+        </a>
+      </div>
+      
+      <div class="dashboard-nav">
+        <a class="dashboard-nav-link active" data-target="admin-overview"><i class="fas fa-tachometer-alt"></i> Overview</a>
+        <a class="dashboard-nav-link" data-target="admin-charts"><i class="fas fa-chart-bar"></i> Analytics</a>
+        <a class="dashboard-nav-link" data-target="admin-approvals"><i class="fas fa-check-double"></i> Approvals</a>
+        <a class="dashboard-nav-link" data-target="admin-packages"><i class="fas fa-cubes"></i> Packages</a>
+        <a class="dashboard-nav-link" data-target="admin-clients"><i class="fas fa-users"></i> Clients</a>
+        <a class="dashboard-nav-link" data-target="admin-ledger"><i class="fas fa-book-open"></i> Financials</a>
+        <a class="dashboard-nav-link" data-target="admin-coupons"><i class="fas fa-percentage"></i> Coupons</a>
+        <a class="dashboard-nav-link" data-target="admin-guides"><i class="fas fa-user-friends"></i> Guides</a>
+        <a class="dashboard-nav-link" data-target="admin-logs"><i class="fas fa-list-alt"></i> System Logs</a>
+        <a class="dashboard-nav-link" data-target="admin-settings"><i class="fas fa-sliders-h"></i> Settings</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT CONTENT PANEL -->
+    <main class="dashboard-content-area">
+      
+      <!-- Section 1: Overview Summary -->
+      <section id="admin-overview" class="dashboard-section">
+        <h2 class="dashboard-section-title">Welcome back, <span class="user-display-name text-gradient">Admin</span>!</h2>
+        <div class="row g-4 mb-4">
+          <div class="col-sm-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-coins"></i></div>
+              <div class="stat-number">₹48L</div>
+              <small class="text-secondary">Monthly Revenue</small>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-user-plus"></i></div>
+              <div class="stat-number">124</div>
+              <small class="text-secondary">New Signups</small>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+              <div class="stat-number">86</div>
+              <small class="text-secondary">Active Bookings</small>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-server"></i></div>
+              <div class="stat-number">99.9%</div>
+              <small class="text-secondary">Server Uptime</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Analytics Graphs (Chart.js) -->
+      <section id="admin-charts" class="dashboard-section">
+        <h2 class="dashboard-section-title">Visual Analytics</h2>
+        <div class="row g-4">
+          <div class="col-12 col-lg-8">
+            <div class="glass-card">
+              <h5 class="text-white mb-4">Sales & Booking Performance</h5>
+              <canvas id="adminSalesChart"></canvas>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="glass-card mb-4">
+              <h5 class="text-white mb-4">Popularity Index</h5>
+              <canvas id="adminDestinationsChart"></canvas>
+            </div>
+            <div class="glass-card">
+              <h5 class="text-white mb-4">Satisfaction Index</h5>
+              <canvas id="adminSatisfactionChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Booking Approvals Queue (Redirects to 404 on click) -->
+      <section id="admin-approvals" class="dashboard-section">
+        <h2 class="dashboard-section-title">Booking Approvals</h2>
+        <div class="glass-card">
+          <div class="table-responsive">
+            <table class="table table-dark table-borderless bg-transparent text-secondary mb-0">
+              <thead>
+                <tr class="border-bottom border-secondary">
+                  <th>Client</th>
+                  <th>Tour Pack</th>
+                  <th>Order Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Marcus Vance</td>
+                  <td>Classical Kerala Backwaters</td>
+                  <td>2026-07-06</td>
+                  <td>
+                    <button class="btn btn-stackly-primary btn-sm px-3 me-2 btn-dummy-action">Approve</button>
+                    <a href="404.html" class="btn btn-outline-secondary btn-sm px-3 btn-dummy-action">Decline</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Package Configurator -->
+      <section id="admin-packages" class="dashboard-section">
+        <h2 class="dashboard-section-title">Package Configurator</h2>
+        <div class="glass-card">
+          <h5 class="text-white mb-3">Add Custom Tour Package</h5>
+          <form action="404.html" method="GET">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label text-secondary small">Tour Name</label>
+                <input type="text" class="form-control bg-transparent border-secondary text-white" placeholder="e.g., Goa Beach Retreat" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-secondary small">Base Price (₹)</label>
+                <input type="number" class="form-control bg-transparent border-secondary text-white" placeholder="14500" required>
+              </div>
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-stackly-primary">Deploy Package</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Section 5: Clients Directory Database -->
+      <section id="admin-clients" class="dashboard-section">
+        <h2 class="dashboard-section-title">Client Database</h2>
+        <div class="glass-card">
+          <div class="table-responsive">
+            <table class="table table-dark table-borderless bg-transparent text-secondary mb-0">
+              <thead>
+                <tr class="border-bottom border-secondary">
+                  <th>ID</th>
+                  <th>Client Name</th>
+                  <th>Email</th>
+                  <th>Active Bookings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>USR-8902</td>
+                  <td>Marcus Vance</td>
+                  <td>marcus@domain.com</td>
+                  <td>01</td>
+                </tr>
+                <tr>
+                  <td>USR-4720</td>
+                  <td>Liam Anderson</td>
+                  <td>liam@domain.com</td>
+                  <td>00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Financial Ledgers -->
+      <section id="admin-ledger" class="dashboard-section">
+        <h2 class="dashboard-section-title">Financial Ledger</h2>
+        <div class="glass-card">
+          <div class="table-responsive">
+            <table class="table table-dark table-borderless bg-transparent text-secondary mb-0">
+              <thead>
+                <tr class="border-bottom border-secondary">
+                  <th>Date</th>
+                  <th>Category</th>
+                  <th>Inflow</th>
+                  <th>Outflow</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026-07-07</td>
+                  <td>Kerala Tour Sale</td>
+                  <td class="text-success">+₹18,500.00</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>2026-07-06</td>
+                  <td>Hotel Taj Deposit</td>
+                  <td>-</td>
+                  <td class="text-danger">-₹3,500.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Coupon Code Generator -->
+      <section id="admin-coupons" class="dashboard-section">
+        <h2 class="dashboard-section-title">Coupon Management</h2>
+        <div class="glass-card">
+          <h5 class="text-white mb-3">Create Promotion Coupon</h5>
+          <form action="404.html" method="GET">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label text-secondary small">Coupon Code</label>
+                <input type="text" class="form-control bg-transparent border-secondary text-white" placeholder="SUMMER30" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-secondary small">Discount Percentage (%)</label>
+                <input type="number" class="form-control bg-transparent border-secondary text-white" placeholder="30" required>
+              </div>
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-stackly-primary">Activate Coupon</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Section 8: Tour Guides Allocation -->
+      <section id="admin-guides" class="dashboard-section">
+        <h2 class="dashboard-section-title">Guides Scheduler</h2>
+        <div class="glass-card">
+          <div class="table-responsive">
+            <table class="table table-dark table-borderless bg-transparent text-secondary mb-0">
+              <thead>
+                <tr class="border-bottom border-secondary">
+                  <th>Guide Name</th>
+                  <th>Assigned Region</th>
+                  <th>Client Schedule</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Kabir Sharma</td>
+                  <td>Mumbai, Goa</td>
+                  <td>Marcus Vance (Oct 15)</td>
+                  <td><span class="badge bg-success">Assigned</span></td>
+                </tr>
+                <tr>
+                  <td>Rahul Verma</td>
+                  <td>Manali, Himachal</td>
+                  <td>None</td>
+                  <td><span class="badge bg-secondary">Standby</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9: System Activity Logs -->
+      <section id="admin-logs" class="dashboard-section">
+        <h2 class="dashboard-section-title">System Activity Logs</h2>
+        <div class="glass-card p-3">
+          <div class="text-secondary small font-monospace">
+            <div class="mb-2"><span class="text-success">[22:45:10]</span> USR-8902 logged in from IP 192.168.1.45</div>
+            <div class="mb-2"><span class="text-success">[22:42:01]</span> Invoice INV-2026-092 compiled successfully</div>
+            <div><span class="text-warning">[22:38:15]</span> Scheduled server backup completed on node-B</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10: Dashboard Settings & Logout -->
+      <section id="admin-settings" class="dashboard-section">
+        <h2 class="dashboard-section-title">System Settings</h2>
+        <div class="glass-card">
+          <div class="mb-4">
+            <h5 class="text-white mb-2">Platform Status Toggle</h5>
+            <div class="form-check form-switch text-secondary small">
+              <input class="form-check-input" type="checkbox" id="engineStatus" checked>
+              <label class="form-check-label" for="engineStatus">Online Booking Engine Active</label>
+            </div>
+          </div>
+          <div>
+            <h5 class="text-white mb-3">Admin Actions</h5>
+            <a href="login.html" class="btn btn-stackly-primary"><i class="fas fa-sign-out-alt me-2"></i>Sign Out Session</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Custom scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

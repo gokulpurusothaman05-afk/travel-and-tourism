@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Travel</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap Select -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css">
+  <!-- Magnific Popup CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <!-- jQuery UI CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <!-- noUiSlider CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <!-- Tiny Slider CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="section-dark">
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-logo">STACKLY</div>
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Injected Header -->
+  <div id="header-container"></div>
+
+  <!-- CONTENT SECTIONS (10 Sections) -->
+
+  <!-- Section 1: Hero Banner (Jarallax & GSAP) -->
+  <section id="section-hero" class="hero-slider-section jarallax" style="background-image: url('assets/images/hero_bg.png');">
+    <div class="container h-100 d-flex align-items-center">
+      <div class="hero-content" data-aos="fade-up">
+        <span class="section-subtitle">Heritage Escapes</span>
+        <h1 class="hero-title-large text-white">INDIA<br>TOURS<span>.</span></h1>
+        <p class="hero-description">Immerse yourself in the perfect blend of royal heritage, scenic hill stations, and tranquil backwaters. Let Stackly take you on a curated journey beyond limits.</p>
+        <div class="hero-buttons">
+          <a href="tours.html" class="btn btn-stackly-primary me-3 hover-scale">Book Your Tour</a>
+          <a href="#section-itinerary" class="btn btn-stackly-outline hover-scale">Explore Itinerary</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Timeline Itinerary (Pinterest Reference Inspired) -->
+  <section id="section-itinerary" class="section-dark-secondary">
+    <div class="container">
+      <div class="section-title-wrapper text-center">
+        <span class="section-subtitle">Curated Schedule</span>
+        <h2 class="section-title">About The <span>Tour</span></h2>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+          <img src="assets/images/tour_kerala.png" alt="India Taj Mahal Tour" class="img-fluid rounded-4 shadow-lg hover-scale">
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="timeline-pinterest">
+            <div class="timeline-item-pinterest">
+              <div class="timeline-date">Days 1 - 3</div>
+              <h4 class="text-white">Delhi & Taj Mahal Heritage</h4>
+              <p class="text-secondary small">Arrive in New Delhi, the historic capital. Excursion to Agra to witness the striking sunrise beauty of the Taj Mahal and visit the massive Agra Fort.</p>
+            </div>
+            <div class="timeline-item-pinterest">
+              <div class="timeline-date">Days 4 - 6</div>
+              <h4 class="text-white">Jaipur Pink City Palaces</h4>
+              <p class="text-secondary small">Board the high-speed Vande Bharat train to Jaipur. Wander through the mesmerizing Hawa Mahal, Amer Fort, and experience authentic Rajasthani heritage.</p>
+            </div>
+            <div class="timeline-item-pinterest">
+              <div class="timeline-date">Days 7 - 10</div>
+              <h4 class="text-white">Kerala Backwaters & Houseboats</h4>
+              <p class="text-secondary small">End your journey in the tranquil greenery of Kerala. Experience a traditional tea plantation walk and relax on an overnight houseboat cruise in Alleppey.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: What's Included -->
+  <section id="section-whats-included" class="section-dark">
+    <div class="container">
+      <div class="section-title-wrapper text-center">
+        <span class="section-subtitle">Comfort First</span>
+        <h2 class="section-title">What's <span>Included</span></h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card h-100">
+            <div class="stat-icon mb-4"><i class="fas fa-hiking"></i></div>
+            <h4 class="text-white mb-3">VIP Guides</h4>
+            <p class="text-secondary small">Knowledgeable local guides who know every hidden secret and historical anecdote about the heritage monuments.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card h-100">
+            <div class="stat-icon mb-4"><i class="fas fa-plane"></i></div>
+            <h4 class="text-white mb-3">Premium Flights</h4>
+            <p class="text-secondary small">Top-tier airlines with luxury lounge access, priority check-in, and premium cabin spacing.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="glass-card h-100">
+            <div class="stat-icon mb-4"><i class="fas fa-car"></i></div>
+            <h4 class="text-white mb-3">VIP Transfers</h4>
+            <p class="text-secondary small">Private luxury transfers from airport terminals straight to your hotels without wait times.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="glass-card h-100">
+            <div class="stat-icon mb-4"><i class="fas fa-hotel"></i></div>
+            <h4 class="text-white mb-3">5-Star Stays</h4>
+            <p class="text-secondary small">Award-winning luxury hotels, heritage havelis, and luxury backwater houseboats with gourmet dining included.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Trending Destinations Carousel (Owl Carousel) -->
+  <section id="section-trending" class="section-dark-secondary">
+    <div class="container">
+      <div class="section-title-wrapper text-center">
+        <span class="section-subtitle">Inspiration</span>
+        <h2 class="section-title">Trending <span>Hotspots</span></h2>
+      </div>
+      <div class="owl-carousel owl-theme">
+        <div class="glass-card p-0 overflow-hidden">
+          <img src="assets/images/tour_rajasthan.png" alt="Taj Mahal">
+          <div class="p-4">
+            <h4 class="text-white">Agra, Uttar Pradesh</h4>
+            <p class="text-secondary small">Starting from ₹12,000</p>
+            <a href="tours.html" class="btn btn-link text-gradient p-0">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="glass-card p-0 overflow-hidden">
+          <img src="assets/images/tour_goa.png" alt="Goa Beaches">
+          <div class="p-4">
+            <h4 class="text-white">Goa Beach Escapes</h4>
+            <p class="text-secondary small">Starting from ₹15,000</p>
+            <a href="tours.html" class="btn btn-link text-gradient p-0">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="glass-card p-0 overflow-hidden">
+          <img src="assets/images/tour_manali.png" alt="Kerala Backwaters">
+          <div class="p-4">
+            <h4 class="text-white">Munnar, Kerala</h4>
+            <p class="text-secondary small">Starting from ₹18,000</p>
+            <a href="tours.html" class="btn btn-link text-gradient p-0">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="glass-card p-0 overflow-hidden">
+          <img src="assets/images/tour_kerala.png" alt="Jaipur Palaces">
+          <div class="p-4">
+            <h4 class="text-white">Jaipur, Rajasthan</h4>
+            <p class="text-secondary small">Starting from ₹14,000</p>
+            <a href="tours.html" class="btn btn-link text-gradient p-0">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Flash Deals Countdown -->
+  <section id="section-flash-deals" class="section-dark">
+    <div class="container text-center">
+      <div class="section-title-wrapper">
+        <span class="section-subtitle">Limited Offers</span>
+        <h2 class="section-title">Summer Flash <span>Deals</span></h2>
+      </div>
+      <p class="text-secondary mb-5">Hurry up! Save 30% on our premium all-inclusive tour pack to Kerala. Ends in:</p>
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8" id="flash-deals-countdown"></div>
+      </div>
+      <a href="tours.html" class="btn btn-stackly-primary hover-scale">Book Deal Now</a>
+    </div>
+  </section>
+
+  <!-- Section 6: Virtual Journey Video (Magnific Popup Video iframe) -->
+  <section id="section-virtual-journey" class="section-dark-secondary text-center jarallax" style="background-image: url('assets/images/tour_goa.png');">
+    <div class="container py-5 position-relative z-index-2">
+      <div class="glass-card py-5 max-width-600 mx-auto" data-aos="zoom-in">
+        <h2 class="text-white mb-4">A Glimpse of the Journey</h2>
+        <p class="text-secondary mb-4">Click below to watch our high-definition travel teaser of the Taj Mahal and see what awaits you on your next Stackly trip.</p>
+        <a href="404.html" class="btn btn-stackly-primary btn-lg magnific-video hover-scale"><i class="fas fa-play me-2"></i> Play Video Trailer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Travel Stats -->
+  <section id="section-stats" class="section-dark">
+    <div class="container text-center">
+      <div class="row g-4">
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card">
+            <h3 class="text-gradient font-bold h1 counter-value" data-count="15000">15,000+</h3>
+            <p class="text-secondary mb-0">Happy Clients</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card">
+            <h3 class="text-gradient font-bold h1 counter-value" data-count="350">350+</h3>
+            <p class="text-secondary mb-0">Destinations</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="glass-card">
+            <h3 class="text-gradient font-bold h1 counter-value" data-count="12">12+</h3>
+            <p class="text-secondary mb-0">Years Active</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="glass-card">
+            <h3 class="text-gradient font-bold h1 counter-value" data-count="99">99.8%</h3>
+            <p class="text-secondary mb-0">Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Client Testimonials -->
+  <section id="section-testimonials" class="section-dark-secondary">
+    <div class="container">
+      <div class="section-title-wrapper text-center">
+        <span class="section-subtitle">Reviews</span>
+        <h2 class="section-title">From Our <span>Travelers</span></h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="slick-slider-testimonials text-center">
+            <div>
+              <p class="h4 font-serif text-secondary mb-4">"Stackly structured the most amazing Golden Triangle heritage tour for us. Every detail, from the private guide in Jaipur to our transfers in Delhi, went flawlessly. Fully recommended!"</p>
+              <h6 class="text-white">Rajesh Sharma</h6>
+              <p class="text-muted small">Delhi & Agra Tour</p>
+            </div>
+            <div>
+              <p class="h4 font-serif text-secondary mb-4">"Absolutely spectacular. The luxury houseboat accommodation in Kerala backwaters was worth every single rupee. Booking through their online client dashboard was incredibly easy."</p>
+              <h6 class="text-white">Priya Patel</h6>
+              <p class="text-muted small">Kerala Backwaters Excursion</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: FAQ Accordion -->
+  <section id="section-faq" class="section-dark">
+    <div class="container">
+      <div class="section-title-wrapper text-center">
+        <span class="section-subtitle">FAQ</span>
+        <h2 class="section-title">Frequently <span>Asked</span></h2>
+      </div>
+      <div class="accordion accordion-flush" id="faqAccordion" data-aos="fade-up">
+        <div class="accordion-item bg-transparent border-bottom border-secondary mb-3">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed bg-transparent text-white border-none py-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+              Are domestic flight connections included in the initial tour package price?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary small">Yes, Stackly packages include domestic flights within India. Upgrades to business class options can be requested during booking checkout.</div>
+          </div>
+        </div>
+        <div class="accordion-item bg-transparent border-bottom border-secondary mb-3">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed bg-transparent text-white border-none py-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+              What is your cancellation policy?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary small">We offer fully refundable cancellations up to 14 days before your departure. Cancellations made within 14 days receive a travel voucher valid for 18 months.</div>
+          </div>
+        </div>
+        <div class="accordion-item bg-transparent border-bottom border-secondary mb-3">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed bg-transparent text-white border-none py-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree">
+              Can I customize my tour itinerary?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary small">Absolutely! Stackly specializes in customized itineraries. Our travel agents can swap locations, lengthen stays, or add specific activities.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 10: Call-To-Action Newsletter Signup -->
+  <section id="section-newsletter" class="section-dark-secondary">
+    <div class="container text-center">
+      <div class="glass-card py-5 col-lg-8 mx-auto" data-aos="fade-up">
+        <h2 class="text-white mb-3">Get Custom Itineraries Directly</h2>
+        <p class="text-secondary mb-4">Enter your name and email to receive free luxury travel recommendations and a 10% voucher code.</p>
+        <form class="newsletter-form-common" id="newsletterHomeForm" action="404.html" method="GET">
+          <div class="row g-3 justify-content-center">
+            <div class="col-md-5">
+              <input type="text" class="form-control bg-transparent border-secondary text-white py-3" placeholder="Your Name" required name="name">
+            </div>
+            <div class="col-md-5">
+              <input type="email" class="form-control bg-transparent border-secondary text-white py-3" placeholder="Email Address" required name="email">
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-stackly-primary w-100 py-3" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Injected Footer -->
+  <div id="footer-container"></div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- jQuery UI -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- ImagesLoaded -->
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <!-- Isotope -->
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <!-- Jarallax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/2.1.4/jarallax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/2.1.4/jarallax-element.min.js"></script>
+  <!-- jQuery Appear -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-appear/0.1.1/jquery.appear.min.js"></script>
+  <!-- CircleType -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/circletype/2.3.0/circletype.min.js"></script>
+  <!-- Lettering.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.js"></script>
+  <!-- jQuery Validation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+  <!-- noUiSlider & wNumb -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
+  <!-- Owl Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- Slick -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <!-- Tiny Slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  <!-- flatpickr -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <!-- jquery countdown -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+  <!-- Custom scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

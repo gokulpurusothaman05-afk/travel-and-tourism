@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Travel</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="section-dark">
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-logo">STACKLY</div>
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Mobile Toggle Button (starts from 320px screen) -->
+  <button class="dashboard-toggle-btn">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="dashboard-wrapper">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="dashboard-sidebar">
+      <div class="dashboard-brand">
+        <a class="navbar-brand navbar-brand-stackly" href="index.html">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">STACKLY<span>.</span>
+        </a>
+      </div>
+      
+      <div class="dashboard-nav">
+        <a class="dashboard-nav-link active" data-target="client-overview"><i class="fas fa-chart-line"></i> Overview</a>
+        <a class="dashboard-nav-link" data-target="client-itinerary"><i class="fas fa-map-marked-alt"></i> Itinerary</a>
+        <a class="dashboard-nav-link" data-target="client-bookings"><i class="fas fa-suitcase-rolling"></i> Bookings</a>
+        <a class="dashboard-nav-link" data-target="client-loyalty"><i class="fas fa-award"></i> Rewards</a>
+        <a class="dashboard-nav-link" data-target="client-wishlist"><i class="fas fa-heart"></i> Wishlist</a>
+        <a class="dashboard-nav-link" data-target="client-invoices"><i class="fas fa-file-invoice-dollar"></i> Invoices</a>
+        <a class="dashboard-nav-link" data-target="client-chat"><i class="fas fa-comments"></i> Live Chat</a>
+        <a class="dashboard-nav-link" data-target="client-profile"><i class="fas fa-user-cog"></i> Profile</a>
+        <a class="dashboard-nav-link" data-target="client-security"><i class="fas fa-shield-alt"></i> Security</a>
+        <a class="dashboard-nav-link" data-target="client-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT CONTENT PANEL -->
+    <main class="dashboard-content-area">
+      
+      <!-- Section 1: Overview Quick Stats -->
+      <section id="client-overview" class="dashboard-section">
+        <h2 class="dashboard-section-title">Welcome back, <span class="user-display-name text-gradient">Marcus Vance</span>!</h2>
+        <div class="row g-4 mb-4">
+          <div class="col-sm-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-route"></i></div>
+              <div class="stat-number">12</div>
+              <small class="text-secondary">Completed Trips</small>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-plane-departure"></i></div>
+              <div class="stat-number">01</div>
+              <small class="text-secondary">Upcoming Flight</small>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-star"></i></div>
+              <div class="stat-number">7,500</div>
+              <small class="text-secondary">Loyalty Points</small>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-wallet"></i></div>
+              <div class="stat-number">₹3,500</div>
+              <small class="text-secondary">Account Credit</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Itinerary Details -->
+      <section id="client-itinerary" class="dashboard-section">
+        <h2 class="dashboard-section-title">Upcoming Itinerary</h2>
+        <div class="glass-card">
+          <h4 class="text-white mb-3">Kerala Backwaters Getaway (10 Days)</h4>
+          <p class="text-secondary small">Departure Date: <strong>2026-10-15</strong> | Flight Code: <strong>AI-809</strong></p>
+          <div class="timeline-pinterest mt-4">
+            <div class="timeline-item-pinterest">
+              <div class="timeline-date">Day 1</div>
+              <h6 class="text-white">Arrive Cochin International Terminal 1</h6>
+              <p class="text-secondary small mb-0">Private luxury transport to Taj Malabar hotel. Check-in and leisure.</p>
+            </div>
+            <div class="timeline-item-pinterest">
+              <div class="timeline-date">Day 2</div>
+              <h6 class="text-white">Alleppey Houseboat Embarkation</h6>
+              <p class="text-secondary small mb-0">Private VIP guide meets at hotel lobby at 09:00 AM.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Bookings Management -->
+      <section id="client-bookings" class="dashboard-section">
+        <h2 class="dashboard-section-title">Your Travel Bookings</h2>
+        <div class="glass-card">
+          <div class="table-responsive">
+            <table class="table table-dark table-borderless bg-transparent text-secondary mb-0">
+              <thead>
+                <tr class="border-bottom border-secondary">
+                  <th>Tour Name</th>
+                  <th>Dates</th>
+                  <th>Price</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Classical Kerala Backwaters</td>
+                  <td>2026-10-15 - 10-25</td>
+                  <td>₹18,500</td>
+                  <td><span class="badge bg-success">Confirmed</span></td>
+                </tr>
+                <tr>
+                  <td>Royal Rajasthan Heritage</td>
+                  <td>2025-04-10 - 04-18</td>
+                  <td>₹21,000</td>
+                  <td><span class="badge bg-secondary">Completed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Loyalty Points Tracker -->
+      <section id="client-loyalty" class="dashboard-section">
+        <h2 class="dashboard-section-title">Loyalty Points Hub</h2>
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <div class="glass-card text-center py-4">
+              <h4 class="text-white mb-4">Gold Tier Progress</h4>
+              <div class="mx-auto" style="max-width: 200px;">
+                <canvas id="clientLoyaltyChart"></canvas>
+              </div>
+              <h5 class="text-white mt-4">7,500 / 10,000 Points</h5>
+              <p class="text-secondary small mb-0">Earn 2,500 more points to unlock Domestic Lounge Vouchers!</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="glass-card">
+              <h4 class="text-white mb-3">Expenses Breakdown</h4>
+              <div class="mx-auto" style="max-width: 250px;">
+                <canvas id="clientExpensesChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Saved Wishlist Destinations -->
+      <section id="client-wishlist" class="dashboard-section">
+        <h2 class="dashboard-section-title">Saved Wishlist</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="glass-card p-0 overflow-hidden">
+              <img src="assets/images/tour_goa.png" alt="Goa" class="w-100" style="height: 150px; object-fit: cover;">
+              <div class="p-3">
+                <h5 class="text-white">Goa Beach Retreat</h5>
+                <p class="text-secondary small mb-2">Saved on: 2026-06-25</p>
+                <a href="tours.html" class="btn btn-stackly-primary btn-sm">Book Excursion</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Invoices & Payments (Redirects to 404 on click) -->
+      <section id="client-invoices" class="dashboard-section">
+        <h2 class="dashboard-section-title">Financial Invoices</h2>
+        <div class="glass-card">
+          <div class="table-responsive">
+            <table class="table table-dark table-borderless bg-transparent text-secondary mb-0">
+              <thead>
+                <tr class="border-bottom border-secondary">
+                  <th>Invoice ID</th>
+                  <th>Tour</th>
+                  <th>Amount</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>INV-2026-092</td>
+                  <td>Kerala Backwaters Excursion</td>
+                  <td>₹18,500</td>
+                  <td><a href="404.html" class="btn btn-outline-secondary btn-sm btn-dummy-action"><i class="fas fa-file-download me-1"></i>PDF</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Live Chat Portal -->
+      <section id="client-chat" class="dashboard-section">
+        <h2 class="dashboard-section-title">Live Chat Support</h2>
+        <div class="glass-card d-flex flex-column" style="height: 400px;">
+          <div class="chat-header p-3 border-bottom border-secondary d-flex align-items-center">
+            <div class="avatar bg-gradient p-1 rounded-circle me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-user-tie text-white"></i></div>
+            <div>
+              <h6 class="text-white mb-0">Kabir Sharma</h6>
+              <small class="text-success"><i class="fas fa-circle me-1 small"></i> Online (Your Mumbai Guide)</small>
+            </div>
+          </div>
+          <div class="chat-messages p-3 flex-grow-1 overflow-y-auto text-secondary small">
+            <div class="message mb-3">
+              <span class="d-block text-white font-bold">Kabir [09:12 AM]:</span>
+              Hello! I've confirmed your private transport vehicle from Cochin Airport. Let me know if you need houseboat swap tips!
+            </div>
+          </div>
+          <div class="chat-footer p-3 border-top border-secondary">
+            <div class="input-group">
+              <input type="text" class="form-control bg-transparent border-secondary text-white" placeholder="Write message to Kabir...">
+              <button class="btn btn-stackly-primary btn-dummy-action"><i class="fas fa-paper-plane"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Profile & Travel Preferences Form -->
+      <section id="client-profile" class="dashboard-section">
+        <h2 class="dashboard-section-title">Profile Settings</h2>
+        <div class="glass-card">
+          <form action="404.html" method="GET">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label text-secondary small">Full Name</label>
+                <input type="text" class="form-control bg-transparent border-secondary text-white" value="Marcus Vance" required name="fullname" id="profile-name">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-secondary small">Email Address</label>
+                <input type="email" class="form-control bg-transparent border-secondary text-white" value="marcus@domain.com" disabled id="profile-email">
+              </div>
+              <div class="col-12">
+                <label class="form-label text-secondary small">Dietary Preferences</label>
+                <input type="text" class="form-control bg-transparent border-secondary text-white" value="Vegetarian Options Preferred" required>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-stackly-primary">Save Profile Preferences</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Section 9: Security & Notifications -->
+      <section id="client-security" class="dashboard-section">
+        <h2 class="dashboard-section-title">Security Parameters</h2>
+        <div class="glass-card">
+          <div class="mb-4">
+            <h5 class="text-white mb-2">Two-Factor Authentication</h5>
+            <p class="text-secondary small">Secure your travel tickets by enabling SMS verification.</p>
+            <button class="btn btn-outline-secondary btn-sm btn-dummy-action">Enable SMS 2FA</button>
+          </div>
+          <div>
+            <h5 class="text-white mb-2">Notification Settings</h5>
+            <div class="form-check form-switch text-secondary small">
+              <input class="form-check-input" type="checkbox" id="emailNotif" checked>
+              <label class="form-check-label" for="emailNotif">Receive flight delay alerts via Email</label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10: Logout Confirmation -->
+      <section id="client-logout" class="dashboard-section">
+        <h2 class="dashboard-section-title">Log Out</h2>
+        <div class="glass-card text-center py-5">
+          <h4 class="text-white mb-3">Ready to leave the dashboard?</h4>
+          <p class="text-secondary small mb-4">Click below to securely sign out of your client profile session.</p>
+          <a href="login.html" class="btn btn-stackly-primary"><i class="fas fa-sign-out-alt me-2"></i>Logout Session</a>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Custom scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

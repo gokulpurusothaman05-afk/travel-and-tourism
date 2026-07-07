@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Travel</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap Select -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css">
+  <!-- Magnific Popup CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <!-- jQuery UI CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <!-- noUiSlider CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <!-- Tiny Slider CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="section-dark">
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-logo">STACKLY</div>
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Injected Header -->
+  <div id="header-container"></div>
+
+  <!-- CONTENT SECTIONS (10 Sections) -->
+
+  <!-- Section 1: Hero Banner -->
+  <section id="section-contact-hero" class="hero-slider-section jarallax" style="background-image: url('assets/images/hero_bg.png'); height: 60vh;">
+    <div class="container h-100 d-flex align-items-center">
+      <div class="hero-content" data-aos="fade-up">
+        <span class="section-subtitle">Support Crew</span>
+        <h1 class="text-white h1 font-serif display-4">Contact Stackly</h1>
+        <p class="text-secondary mb-0">Our reservation managers and local guide coordinators are online 24/7 to support you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Contact Form & Info Cards -->
+  <section id="section-contact-main" class="section-dark">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5" data-aos="fade-right">
+          <h3 class="text-white mb-4">Office Headquarters</h3>
+          
+          <div class="glass-card mb-3">
+            <h5 class="text-white"><i class="fas fa-map-marker-alt text-gradient me-2"></i> Mumbai Main Office</h5>
+            <p class="text-secondary small mb-0">Bandra Kurla Complex (BKC), Mumbai, MH 400051</p>
+          </div>
+          <div class="glass-card mb-3">
+            <h5 class="text-white"><i class="fas fa-phone-alt text-gradient me-2"></i> Support Helpline</h5>
+            <p class="text-secondary small mb-0">+91 22 5555 0192</p>
+          </div>
+          <div class="glass-card">
+            <h5 class="text-white"><i class="fas fa-envelope text-gradient me-2"></i> Reservation Email</h5>
+            <p class="text-secondary small mb-0">bookings@stackly.in</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="glass-card">
+            <h4 class="text-white mb-4">Send Us An Inquiry</h4>
+            <form id="contactForm" action="404.html" method="GET">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label text-secondary small">Your Name</label>
+                  <input type="text" class="form-control bg-transparent border-secondary text-white" required name="name" placeholder="John Doe">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label text-secondary small">Email Address</label>
+                  <input type="email" class="form-control bg-transparent border-secondary text-white" required name="email" placeholder="name@domain.com">
+                </div>
+                <div class="col-12">
+                  <label class="form-label text-secondary small">Subject</label>
+                  <input type="text" class="form-control bg-transparent border-secondary text-white" required name="subject" placeholder="e.g. Kerala Package Customization">
+                </div>
+                <div class="col-12">
+                  <label class="form-label text-secondary small">Message</label>
+                  <textarea class="form-control bg-transparent border-secondary text-white" rows="5" required name="message" placeholder="Describe your dates, traveler counts, and specific requests..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-stackly-primary px-4 py-2">Submit Inquiry</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Injected Footer -->
+  <div id="footer-container"></div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- jQuery UI -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- ImagesLoaded -->
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <!-- Isotope -->
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <!-- Jarallax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/2.1.4/jarallax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/2.1.4/jarallax-element.min.js"></script>
+  <!-- jQuery Appear -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-appear/0.1.1/jquery.appear.min.js"></script>
+  <!-- CircleType -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/circletype/2.3.0/circletype.min.js"></script>
+  <!-- Lettering.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <!-- jQuery Validation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+  <!-- noUiSlider & wNumb -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
+  <!-- Owl Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- Slick -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <!-- Tiny Slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  <!-- flatpickr -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <!-- jquery countdown -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+  <!-- Custom scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
