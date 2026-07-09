@@ -174,7 +174,7 @@
         <div class="row g-3">
           <div class="col-md-6">
             <div class="glass-card p-0 overflow-hidden">
-              <img src="assets/images/tour_goa.png" alt="Goa" class="w-100" style="height: 150px; object-fit: cover;">
+              <img src="assets/images/tour_goa.webp" alt="Goa" class="w-100" style="height: 150px; object-fit: cover;">
               <div class="p-3">
                 <h5 class="text-white">Goa Beach Retreat</h5>
                 <p class="text-secondary small mb-2">Saved on: 2026-06-25</p>
@@ -271,7 +271,11 @@
           <div class="mb-4">
             <h5 class="text-white mb-2">Two-Factor Authentication</h5>
             <p class="text-secondary small">Secure your travel tickets by enabling SMS verification.</p>
-            <button class="btn btn-outline-secondary btn-sm btn-dummy-action">Enable SMS 2FA</button>
+            <div class="input-group mb-2" style="max-width: 320px;">
+              <span class="input-group-text bg-transparent border-secondary text-secondary">+91</span>
+              <input type="tel" class="form-control bg-transparent border-secondary text-white" placeholder="Enter Mobile Number" name="sms_phone" required>
+              <button class="btn btn-outline-secondary btn-dummy-action">Enable SMS 2FA</button>
+            </div>
           </div>
           <div>
             <h5 class="text-white mb-2">Notification Settings</h5>

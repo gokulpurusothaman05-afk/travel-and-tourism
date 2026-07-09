@@ -64,6 +64,69 @@ $(document).ready(function() {
   // 4. Intercept all placeholder button clicks on dashboards to redirect to 404
   $('.dashboard-content-area').on('click', '.btn-dummy-action', function(e) {
     e.preventDefault();
+    
+    // Find closest container that might hold an associated input (cell <td>, input-group, or parent div)
+    let container = $(this).closest('.input-group');
+    if (!container.length) {
+      container = $(this).closest('td');
+    }
+    if (!container.length) {
+      container = $(this).parent();
+    }
+    
+    const inputField = container.find('input, textarea, select');
+    if (inputField.length) {
+      let emptyFound = false;
+      inputField.each(function() {
+        // Only validate if not disabled
+        if (!$(this).prop('disabled') && !$(this).val().trim()) {
+          $(this).addClass('is-invalid');
+          emptyFound = true;
+        } else {
+          $(this).removeClass('is-invalid');
+        }
+      });
+      
+      if (emptyFound) {
+        alert("Please fill in the required input details first!");
+        return;
+      }
+    }
+
+    // Also check if inside a form
+    const parentForm = $(this).closest('form');
+    if (parentForm.length) {
+      let allValid = true;
+      parentForm.find('input[required], select[required], textarea[required]').each(function() {
+        if (!$(this).val()) {
+          allValid = false;
+          $(this).addClass('is-invalid');
+        } else {
+          $(this).removeClass('is-invalid');
+        }
+      });
+      if (!allValid) {
+        alert("Please fill in the required form fields first!");
+        return;
+      }
+    }
+
+    // Customize alert message contextually
+    let actionMessage = "Action processed successfully! Redirecting...";
+    const btnText = $(this).text().toLowerCase();
+    if (btnText.includes('pdf') || btnText.includes('download')) {
+      actionMessage = "Downloading document... Redirecting to secure document vault.";
+    } else if (btnText.includes('approve')) {
+      actionMessage = "Booking approved successfully! Redirecting to dashboard ledger.";
+    } else if (btnText.includes('decline')) {
+      actionMessage = "Booking declined. Redirecting to approvals queue.";
+    } else if (btnText.includes('2fa')) {
+      actionMessage = "SMS Two-Factor Authentication enabled successfully! Redirecting...";
+    } else if ($(this).find('i.fa-paper-plane').length || btnText.includes('send')) {
+      actionMessage = "Message sent successfully! Redirecting...";
+    }
+    
+    alert(actionMessage);
     window.location.href = "404.html";
   });
 

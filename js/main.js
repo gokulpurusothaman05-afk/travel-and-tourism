@@ -347,6 +347,17 @@ function initFormsAndValidation() {
   try {
     // Form validation
     if ($.fn.validate) {
+      // Set global validator defaults to place errors outside input-groups
+      $.validator.setDefaults({
+        errorPlacement: function(error, element) {
+          if (element.parent('.input-group').length) {
+            error.insertAfter(element.parent());
+          } else {
+            error.insertAfter(element);
+          }
+        }
+      });
+
       // Contact Form Validation
       $('#contactForm').validate({
         rules: {
@@ -419,11 +430,66 @@ function initFormsAndValidation() {
           confirm_password: {
             required: true,
             equalTo: "#password"
-          }
+          },
+          terms: "required"
+        },
+        messages: {
+          fullname: "Please enter your full name",
+          email: "Please enter a valid email address",
+          password: "Password must be at least 6 characters long",
+          confirm_password: {
+            required: "Please confirm your password",
+            equalTo: "Passwords do not match"
+          },
+          terms: "You must agree to our Terms of Service"
         },
         submitHandler: function(form) {
           alert("Registration successful! Redirecting to login portal...");
           window.location.href = "login.html";
+        }
+      });
+
+      // Tours Search Form Validation
+      $('#toursSearchForm').validate({
+        rules: {
+          date: "required"
+        },
+        messages: {
+          date: "Please select a departure date"
+        },
+        submitHandler: function(form) {
+          alert("Search successful! Redirecting to matches...");
+          window.location.href = "404.html";
+        }
+      });
+
+      // Callback Request Form Validation
+      $('#callbackForm').validate({
+        rules: {
+          phone: "required",
+          time: "required"
+        },
+        messages: {
+          phone: "Please enter your mobile phone number",
+          time: "Please enter your preferred callback time"
+        },
+        submitHandler: function(form) {
+          alert("Callback request submitted! A travel coordinator will phone you back. Redirecting...");
+          window.location.href = "404.html";
+        }
+      });
+
+      // 404 Search Form Validation
+      $('#search404Form').validate({
+        rules: {
+          query: "required"
+        },
+        messages: {
+          query: "Please enter a search query"
+        },
+        submitHandler: function(form) {
+          alert("Redirecting to tours search...");
+          window.location.href = "tours.html";
         }
       });
     }

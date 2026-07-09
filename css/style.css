@@ -678,3 +678,12 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+label.error, span.invalid-feedback {
+  display: block !important;
+  color: var(--accent-copper) !important;
+  font-size: 0.8rem !important;
+  margin-top: 5px !important;
+  text-align: left !important;
+  width: 100% !important;
+}
